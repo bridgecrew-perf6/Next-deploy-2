@@ -1,9 +1,15 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 function netflix() {
   const router = useRouter();
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <Head>
+        <title>Netflix Clone</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <button
         type="button"
         onClick={() => router.push("/")}
