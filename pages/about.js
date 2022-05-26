@@ -1,5 +1,10 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useRouter } from "next/router";
+
+const BackButton = dynamic(() => import("./components/backButton"));
+
+console.log("About page Read");
 
 function about() {
   const router = useRouter();
@@ -23,6 +28,7 @@ function about() {
           Check out my projects!
         </button>
       </div>
+      <BackButton/>
     </div>
   );
 }

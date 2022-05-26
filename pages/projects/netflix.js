@@ -1,5 +1,11 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+import PrefetchButton from '../components/prefetchButton'
+
+const BackButton = dynamic(() => import("../components/backButton"));
+
+console.log("Netflix page Read");
 
 function netflix() {
   const router = useRouter();
@@ -17,7 +23,10 @@ function netflix() {
       >
         Netflix Clone
       </button>
+      <BackButton/>
+      <PrefetchButton/>
     </div>
+    
   );
 }
 

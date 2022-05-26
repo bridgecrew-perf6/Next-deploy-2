@@ -1,5 +1,11 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const BackButton = dynamic(() => import("../components/backButton"));
+const ReplaceButton = dynamic(() => import("../components/replaceButton"));
+
+console.log("Project page Read");
 
 function project() {
   const router = useRouter();
@@ -20,6 +26,8 @@ function project() {
       >
         Check out my netflix clone!
       </button>
+      <BackButton/>
+      <ReplaceButton/>
     </div>
   );
 }
